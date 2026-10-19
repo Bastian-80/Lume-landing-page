@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LUMÉ Beauty Studio · Official Landing</title>
 
-  <!-- Google Tag Manager (Aquí irá tu código GTM) -->
+  <!-- Google Tag Manager (Próximo paso) -->
 
   <!-- Fuentes e Iconos -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,7 +80,7 @@
 
     /* 8. Pre-footer / Contacto CRM */
     .prefooter-box { background: var(--sand); padding: 4rem 2rem; border-radius: 20px; text-align: center; max-width: 800px; margin: 0 auto; }
-    #hubspot-form-container { margin-top: 2rem; min-height: 200px; }
+    #hubspot-form-container { margin-top: 2rem; text-align: left; background: var(--white); padding: 2rem; border-radius: 15px; }
 
     /* 9. Footer */
     footer { background: var(--espresso); color: var(--pearl); text-align: center; padding: 3rem 1rem; margin-top: 5rem; }
@@ -92,6 +92,9 @@
       .hero-content h1 { font-size: 2.8rem; }
     }
   </style>
+
+  <!-- Script de HubSpot Form -->
+  <script src="https://js.hsforms.net/forms/embed/52186777.js" defer></script>
 </head>
 <body>
 
@@ -234,9 +237,9 @@
       <h2>Hablemos de <em>beauty.</em></h2>
       <p>Déjanos tus datos para recibir asesoría personalizada e integrarte a nuestro club exclusivo.</p>
       
-      <!-- CONTENEDOR PARA EL FORMULARIO DE HUBSPOT -->
+      <!-- FORMULARIO HUBSPOT CRM -->
       <div id="hubspot-form-container">
-        <p style="font-size: 0.9rem; color: #888;">[Aquí se cargará automáticamente el Formulario de HubSpot CRM]</p>
+        <div class="hs-form-frame" data-region="na1" data-form-id="fd75da8a-ddfc-44bd-921b-7b84452df5a8" data-portal-id="52186777"></div>
       </div>
     </div>
   </section>
