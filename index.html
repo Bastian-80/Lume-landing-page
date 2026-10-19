@@ -1,1 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMÉ Beauty Studio · Official Landing</title>
 
+  <!-- Google Tag Manager (Aquí irá tu código GTM) -->
+
+  <!-- Fuentes e Iconos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --rose-nude: #D9A6A6;
+      --sand: #EAD8C8;
+      --espresso: #332520;
+      --pearl: #F8F4EF;
+      --white: #FFFFFF;
+      --font-title: 'Playfair Display', serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-body); background-color: var(--pearl); color: var(--espresso); line-height: 1.6; }
+
+    /* Nav Header */
+    nav { position: sticky; top: 0; background: rgba(248, 244, 239, 0.95); backdrop-filter: blur(10px); z-index: 1000; padding: 1.2rem 5%; border-bottom: 1px solid rgba(51,37,32,0.1); }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+    .logo-brand { font-family: var(--font-title); font-size: 1.5rem; font-weight: 700; letter-spacing: 2px; text-decoration: none; color: var(--espresso); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--espresso); font-size: 0.9rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; transition: opacity 0.3s; }
+    .nav-links a:hover { opacity: 0.6; }
+
+    /* Secciones Comunes */
+    section { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; }
+    .section-tag { font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; color: var(--rose-nude); margin-bottom: 1rem; font-weight: 700; }
+    h2 { font-family: var(--font-title); font-size: 2.8rem; font-weight: 400; margin-bottom: 1.5rem; line-height: 1.2; }
+    h2 em { font-style: italic; }
+
+    /* Buttons */
+    .btn-primary { display: inline-block; background-color: var(--espresso); color: var(--pearl); padding: 1rem 2.5rem; text-decoration: none; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; border-radius: 50px; border: none; cursor: pointer; transition: all 0.3s; }
+    .btn-primary:hover { background-color: var(--rose-nude); color: var(--espresso); transform: translateY(-2px); }
+
+    /* 1. Hero Section */
+    .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; min-height: 80vh; padding-top: 3rem; }
+    .hero-content h1 { font-family: var(--font-title); font-size: 3.8rem; font-weight: 400; line-height: 1.1; margin: 1rem 0 1.5rem 0; }
+    .hero-content h1 em { font-style: italic; color: var(--rose-nude); }
+    .hero-card { background: var(--sand); border-radius: 20px; padding: 4rem; text-align: center; border: 1px solid rgba(51,37,32,0.1); }
+    .hero-card span { font-family: var(--font-title); font-size: 3rem; font-weight: 700; letter-spacing: 4px; }
+
+    /* 2. Beneficios */
+    .beneficios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+    .beneficio-card { background: var(--white); padding: 2.5rem; border-radius: 15px; border: 1px solid rgba(51,37,32,0.05); }
+    .beneficio-card b { display: block; font-family: var(--font-title); font-size: 1.2rem; margin-bottom: 0.5rem; }
+
+    /* 3. CTA 1 */
+    .cta-banner { background-color: var(--sand); border-radius: 20px; text-align: center; padding: 4rem 2rem; margin: 3rem auto; }
+
+    /* 4. Explicacion / Productos */
+    .exp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem; }
+    .exp-item { background: var(--white); border-radius: 15px; padding: 2rem; text-align: center; }
+    .exp-item span { font-family: var(--font-title); font-size: 2rem; color: var(--rose-nude); display: block; margin-bottom: 0.5rem; }
+
+    /* 5. Testimonios */
+    .testimonios-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 2rem; }
+    .testimonio-card { background: var(--white); padding: 2rem; border-radius: 15px; font-style: italic; border-left: 4px solid var(--rose-nude); }
+    .testimonio-author { margin-top: 1rem; font-style: normal; font-weight: 700; font-size: 0.9rem; }
+
+    /* 6. CTA 2 */
+    .cta-2 { background: var(--espresso); color: var(--pearl); text-align: center; padding: 4rem 2rem; border-radius: 20px; }
+    .cta-2 h2 { color: var(--pearl); }
+
+    /* 7. FAQ */
+    .faq-container { margin-top: 2rem; }
+    .faq-item { background: var(--white); margin-bottom: 1rem; padding: 1.5rem; border-radius: 10px; }
+    .faq-item h3 { font-family: var(--font-title); font-size: 1.2rem; margin-bottom: 0.5rem; }
+
+    /* 8. Pre-footer / Contacto CRM */
+    .prefooter-box { background: var(--sand); padding: 4rem 2rem; border-radius: 20px; text-align: center; max-width: 800px; margin: 0 auto; }
+    #hubspot-form-container { margin-top: 2rem; min-height: 200px; }
+
+    /* 9. Footer */
+    footer { background: var(--espresso); color: var(--pearl); text-align: center; padding: 3rem 1rem; margin-top: 5rem; }
+    footer .logo-brand { color: var(--pearl); }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .hero, .beneficios-grid, .exp-grid, .testimonios-grid { grid-template-columns: 1fr; }
+      .hero-content h1 { font-size: 2.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- (GTM Body script irá aquí) -->
+
+  <!-- SECCIÓN 0: HEADER -->
+  <nav id="header">
+    <div class="nav-container">
+      <a href="#hero" class="logo-brand">LUMÉ</a>
+      <ul class="nav-links">
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contacto" class="btn-primary" style="padding: 0.5rem 1.2rem; color: #fff;">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SECCIÓN 1: HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <p class="section-tag">BRAND BOOK · BEAUTY 2026</p>
+      <h1>Tu piel.<br><em>Tu tono.</em><br>Tu esencia.</h1>
+      <p>LUMÉ es una marca de maquillaje pensada para celebrar la belleza real. Creamos productos modernos, inclusivos y fáciles de usar.</p>
+      <br>
+      <a href="#cta1" id="btn-hero-explore" class="btn-primary">Explorar colección</a>
+    </div>
+    <div class="hero-card">
+      <span>LUMÉ</span>
+      <p style="margin-top: 1rem; font-family: var(--font-title); font-size: 1.5rem;">BEAUTY WITHOUT RULES</p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2: BENEFICIOS -->
+  <section id="beneficios">
+    <p class="section-tag">02 · IDENTIDAD Y BENEFICIOS</p>
+    <h2>Más que maquillaje,<br><em>una identidad.</em></h2>
+    <div class="beneficios-grid">
+      <div class="beneficio-card">
+        <b>Propósito</b>
+        <span>Resaltar lo que ya existe de manera natural y sin estereotipos.</span>
+      </div>
+      <div class="beneficio-card">
+        <b>Visión</b>
+        <span>Belleza inclusiva, vegana, cruelty-free y cercana a todos.</span>
+      </div>
+      <div class="beneficio-card">
+        <b>Valores</b>
+        <span>Libertad de expresión, confianza, autenticidad y elegancia.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: CTA 1 -->
+  <section id="cta1">
+    <div class="cta-banner">
+      <h2>Encuentra tu tono ideal hoy</h2>
+      <p>Aprovecha nuestro envío gratuito en tu primera orden de lanzamiento.</p>
+      <br>
+      <a href="#contacto" id="btn-cta-1" class="btn-primary">Solicitar Muestras</a>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: EXPLICACIÓN / PRODUCTOS -->
+  <section id="productos">
+    <p class="section-tag">04 · EXPERIENCIA LUMÉ</p>
+    <h2>El detalle también <em>comunica.</em></h2>
+    <p>Nuestra colección se adapta a tu rutina diaria en solo 3 pasos simples:</p>
+    <div class="exp-grid">
+      <div class="exp-item">
+        <span>01</span>
+        <h3>Descubre</h3>
+        <p>Encuentra tonos y texturas pensados para diferentes tipos y tonalidades de piel.</p>
+      </div>
+      <div class="exp-item">
+        <span>02</span>
+        <h3>Elige</h3>
+        <p>Combina productos versátiles y crea tu propia rutina rápida de maquillaje.</p>
+      </div>
+      <div class="exp-item">
+        <span>03</span>
+        <h3>Exprésate</h3>
+        <p>Tu belleza no tiene reglas. Siéntete libre y radiante todo el día.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5: TESTIMONIOS -->
+  <section id="testimonios">
+    <p class="section-tag">05 · REVIEWS</p>
+    <h2>Lo que dicen <em>de LUMÉ</em></h2>
+    <div class="testimonios-grid">
+      <div class="testimonio-card">
+        <p>"Los tonos son exactamente iguales a la piel real. Se siente ligero, libre y súper elegante durante todo el día."</p>
+        <div class="testimonio-author">— Camila R., Beauty Blogger</div>
+      </div>
+      <div class="testimonio-card">
+        <p>"Por fin una marca que entiende la belleza sin filtros. La calidad de los ingredientes se nota al instante."</p>
+        <div class="testimonio-author">— Sofía M., Maquilladora Profesional</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 6: CTA 2 -->
+  <section id="cta2">
+    <div class="cta-2">
+      <p class="section-tag" style="color: var(--rose-nude);">OFERTA DE LANZAMIENTO</p>
+      <h2>Obtén un 10% OFF en tu primera compra</h2>
+      <p>Únete a la comunidad LUMÉ y recibe consejos exclusivos de maquillaje.</p>
+      <br>
+      <a href="#contacto" id="btn-cta-2" class="btn-primary" style="background: var(--rose-nude); color: var(--espresso);">Quiero mi Descuento</a>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 7: FAQ -->
+  <section id="faq">
+    <p class="section-tag">07 · PREGUNTAS FRECUENTES</p>
+    <h2>Resolvemos tus <em>dudas</em></h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <h3>¿Los productos son aptos para pieles sensibles?</h3>
+        <p>Sí, todos nuestros productos son dermatológicamente probados, hipoalergénicos y 100% cruelty-free.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Cómo puedo conocer mi tono exacto?</h3>
+        <p>Puedes escribirnos mediante el formulario de contacto o pedir nuestro kit de muestras en línea.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Hacen envíos a todo el país?</h3>
+        <p>Efectivamente, despachamos en 24-48 horas a todas las ciudades principales.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 8: PRE-FOOTER / CONTACTO CRM -->
+  <section id="contacto">
+    <div class="prefooter-box">
+      <p class="section-tag">08 · COMUNIDAD & CONTACTO</p>
+      <h2>Hablemos de <em>beauty.</em></h2>
+      <p>Déjanos tus datos para recibir asesoría personalizada e integrarte a nuestro club exclusivo.</p>
+      
+      <!-- CONTENEDOR PARA EL FORMULARIO DE HUBSPOT -->
+      <div id="hubspot-form-container">
+        <p style="font-size: 0.9rem; color: #888;">[Aquí se cargará automáticamente el Formulario de HubSpot CRM]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 9: FOOTER -->
+  <footer id="footer">
+    <a href="#hero" class="logo-brand">LUMÉ</a>
+    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">© 2026 LUMÉ Beauty Studio · Proyecto Brand por Nicolás</p>
+  </footer>
+
+</body>
+</html>
