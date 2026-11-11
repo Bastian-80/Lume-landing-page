@@ -11,7 +11,16 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LUMÉ Beauty Studio · Official Landing</title>
+  <title>LUMÉ Beauty Studio | Maquillaje y belleza natural</title>
+  <meta name="description" content="Descubre LUMÉ Beauty Studio, una propuesta de maquillaje moderno e inclusivo. Encuentra tonos, texturas y productos para expresar tu belleza con libertad.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F8F4EF">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LUMÉ Beauty Studio | Maquillaje y belleza natural">
+  <meta property="og:description" content="Maquillaje moderno e inclusivo para expresar tu belleza con libertad. Descubre la experiencia LUMÉ.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="LUMÉ Beauty Studio">
+  <meta name="twitter:description" content="Maquillaje moderno e inclusivo para expresar tu belleza con libertad.">
 
   <!-- Fuentes e Iconos -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -97,19 +106,115 @@
       .hero, .beneficios-grid, .exp-grid, .testimonios-grid { grid-template-columns: 1fr; }
       .hero-content h1 { font-size: 2.8rem; }
     }
+
+    /* Mejoras visuales, accesibilidad y adaptación móvil */
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { overflow-x: hidden; }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--rose-nude);
+      outline-offset: 4px;
+    }
+    .skip-link {
+      position: absolute; left: 1rem; top: -100px; z-index: 2000;
+      background: var(--espresso); color: var(--white);
+      padding: .75rem 1rem; border-radius: 8px;
+    }
+    .skip-link:focus { top: 1rem; }
+    nav {
+      box-shadow: 0 5px 24px rgba(51,37,32,.045);
+      padding-top: 1rem; padding-bottom: 1rem;
+    }
+    .logo-brand { transition: letter-spacing .25s ease, color .25s ease; }
+    .logo-brand:hover { letter-spacing: 3px; color: #A86F70; }
+    .nav-links a:not(.btn-primary) { position: relative; }
+    .nav-links a:not(.btn-primary)::after {
+      content: ""; position: absolute; left: 0; bottom: -7px;
+      width: 0; height: 2px; background: var(--rose-nude);
+      transition: width .25s ease;
+    }
+    .nav-links a:not(.btn-primary):hover::after { width: 100%; }
+    .hero { gap: clamp(2rem, 5vw, 5rem); }
+    .hero-content { max-width: 560px; }
+    .hero-content h1 { letter-spacing: -1.5px; }
+    .hero-content > p:not(.section-tag) { max-width: 520px; color: #66534B; font-size: 1.05rem; }
+    .hero-card {
+      position: relative; isolation: isolate; overflow: hidden;
+      min-height: 390px; display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.85), transparent 34%),
+        radial-gradient(circle at 85% 80%, rgba(217,166,166,.5), transparent 36%),
+        linear-gradient(135deg, #F1E4DA, #EAD8C8 55%, #D9B9AC);
+      box-shadow: 0 22px 55px rgba(51,37,32,.10);
+    }
+    .hero-card::before, .hero-card::after {
+      content: ""; position: absolute; z-index: -1; border: 1px solid rgba(255,255,255,.7);
+      border-radius: 50%; width: 280px; height: 280px;
+    }
+    .hero-card::after { width: 350px; height: 350px; }
+    .hero-card span { font-size: clamp(3rem, 6vw, 4.8rem); letter-spacing: 8px; }
+    .beneficio-card, .exp-item, .testimonio-card, .faq-item {
+      box-shadow: 0 10px 30px rgba(51,37,32,.045);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .beneficio-card:hover, .exp-item:hover, .testimonio-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 35px rgba(51,37,32,.09);
+    }
+    .beneficio-card { border-top: 3px solid var(--rose-nude); }
+    .exp-item span { font-size: 2.4rem; }
+    .cta-banner, .cta-2, .prefooter-box {
+      box-shadow: 0 18px 45px rgba(51,37,32,.08);
+    }
+    .btn-primary { box-shadow: 0 8px 18px rgba(51,37,32,.12); }
+    .btn-primary:focus-visible { outline-color: var(--rose-nude); }
+    .faq-item { border: 1px solid rgba(51,37,32,.06); }
+    #hubspot-form-container { box-shadow: 0 8px 25px rgba(51,37,32,.05); }
+    footer { border-top: 4px solid var(--rose-nude); }
+    @media (max-width: 900px) {
+      .nav-links { gap: 1rem; }
+      .nav-links a { font-size: .78rem; }
+      .hero { min-height: auto; }
+      .hero-card { min-height: 320px; padding: 3rem 2rem; }
+    }
+    @media (max-width: 680px) {
+      nav { padding: .9rem 5%; }
+      .nav-container { align-items: flex-start; flex-direction: column; gap: .8rem; }
+      .nav-links { width: 100%; flex-wrap: wrap; gap: .65rem 1rem; }
+      .nav-links a { font-size: .72rem; }
+      .nav-links li:last-child { margin-left: auto; }
+      section { padding: 3.5rem 6%; }
+      .hero { gap: 2rem; padding-top: 2.5rem; }
+      .hero-content h1 { font-size: clamp(2.6rem, 12vw, 3.5rem); }
+      h2 { font-size: clamp(2rem, 9vw, 2.6rem); }
+      .hero-card { min-height: 260px; }
+      .beneficio-card, .exp-item { padding: 1.8rem; }
+      .cta-banner, .cta-2, .prefooter-box { padding: 3rem 1.4rem; }
+      #hubspot-form-container { padding: 1rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+
   </style>
 
   <!-- Script de HubSpot Form -->
   <script src="https://js.hsforms.net/forms/embed/52186777.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#hero">Saltar al contenido principal</a>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPPXV3HR"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- SECCIÓN 0: HEADER -->
-  <nav id="header">
+  <nav id="header" aria-label="Navegación principal">
     <div class="nav-container">
       <a href="#hero" class="logo-brand">LUMÉ</a>
       <ul class="nav-links">
@@ -127,7 +232,7 @@
     <div class="hero-content">
       <p class="section-tag">BRAND BOOK · BEAUTY 2026</p>
       <h1>Tu piel.<br><em>Tu tono.</em><br>Tu esencia.</h1>
-      <p>LUMÉ es una marca de maquillaje pensada para celebrar la belleza real. Creamos productos modernos, inclusivos y fáciles de usar.</p>
+      <p>LUMÉ es una marca de maquillaje y belleza pensada para celebrar la belleza real. Descubre productos modernos, inclusivos y fáciles de usar para expresar tu estilo con confianza.</p>
       <br>
       <a href="#cta1" id="btn-hero-explore" class="btn-primary">Explorar colección</a>
     </div>
