@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NPPXV3HR');</script>
-  <!-- End Google Tag Manager -->
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LUMÉ Beauty Studio | Maquillaje y belleza natural</title>
@@ -22,27 +14,34 @@
   <meta name="twitter:title" content="LUMÉ Beauty Studio">
   <meta name="twitter:description" content="Maquillaje moderno e inclusivo para expresar tu belleza con libertad.">
 
-  <!-- Fuentes e Iconos -->
+  <!-- Fuentes: menos pesos y sin bloquear el primer pintado -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap">
+  </noscript>
 
   <style>
     :root {
       --rose-nude: #D9A6A6;
+      --rose-text: #8F5557;   /* versión con buen contraste para texto pequeño */
+      --rose-title: #B07274;  /* versión con contraste para títulos grandes */
       --sand: #EAD8C8;
       --espresso: #332520;
       --pearl: #F8F4EF;
       --white: #FFFFFF;
-      --font-title: 'Playfair Display', serif;
-      --font-body: 'DM Sans', sans-serif;
+      --font-title: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      --font-body: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: var(--font-body); background-color: var(--pearl); color: var(--espresso); line-height: 1.6; }
 
     /* Nav Header */
-    nav { position: sticky; top: 0; background: rgba(248, 244, 239, 0.95); backdrop-filter: blur(10px); z-index: 1000; padding: 1.2rem 5%; border-bottom: 1px solid rgba(51,37,32,0.1); }
+    nav { position: sticky; top: 0; background: rgba(248, 244, 239, 0.98); z-index: 1000; padding: 1.2rem 5%; border-bottom: 1px solid rgba(51,37,32,0.1); }
     .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
     .logo-brand { font-family: var(--font-title); font-size: 1.5rem; font-weight: 700; letter-spacing: 2px; text-decoration: none; color: var(--espresso); }
     .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
@@ -51,7 +50,7 @@
 
     /* Secciones Comunes */
     section { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; }
-    .section-tag { font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; color: var(--rose-nude); margin-bottom: 1rem; font-weight: 700; }
+    .section-tag { font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; color: var(--rose-text); margin-bottom: 1rem; font-weight: 700; }
     h2 { font-family: var(--font-title); font-size: 2.8rem; font-weight: 400; margin-bottom: 1.5rem; line-height: 1.2; }
     h2 em { font-style: italic; }
 
@@ -62,7 +61,7 @@
     /* 1. Hero Section */
     .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; min-height: 80vh; padding-top: 3rem; }
     .hero-content h1 { font-family: var(--font-title); font-size: 3.8rem; font-weight: 400; line-height: 1.1; margin: 1rem 0 1.5rem 0; }
-    .hero-content h1 em { font-style: italic; color: var(--rose-nude); }
+    .hero-content h1 em { font-style: italic; color: var(--rose-title); }
     .hero-card { background: var(--sand); border-radius: 20px; padding: 4rem; text-align: center; border: 1px solid rgba(51,37,32,0.1); }
     .hero-card span { font-family: var(--font-title); font-size: 3rem; font-weight: 700; letter-spacing: 4px; }
 
@@ -77,7 +76,7 @@
     /* 4. Explicacion / Productos */
     .exp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem; }
     .exp-item { background: var(--white); border-radius: 15px; padding: 2rem; text-align: center; }
-    .exp-item span { font-family: var(--font-title); font-size: 2rem; color: var(--rose-nude); display: block; margin-bottom: 0.5rem; }
+    .exp-item span { font-family: var(--font-title); font-size: 2rem; color: var(--rose-title); display: block; margin-bottom: 0.5rem; }
 
     /* 5. Testimonios */
     .testimonios-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 2rem; }
@@ -87,6 +86,7 @@
     /* 6. CTA 2 */
     .cta-2 { background: var(--espresso); color: var(--pearl); text-align: center; padding: 4rem 2rem; border-radius: 20px; }
     .cta-2 h2 { color: var(--pearl); }
+    .cta-2 .section-tag { color: var(--rose-nude); }
 
     /* 7. FAQ */
     .faq-container { margin-top: 2rem; }
@@ -95,7 +95,7 @@
 
     /* 8. Pre-footer / Contacto CRM */
     .prefooter-box { background: var(--sand); padding: 4rem 2rem; border-radius: 20px; text-align: center; max-width: 800px; margin: 0 auto; }
-    #hubspot-form-container { margin-top: 2rem; text-align: left; background: var(--white); padding: 2rem; border-radius: 15px; }
+    #hubspot-form-container { margin-top: 2rem; text-align: left; background: var(--white); padding: 2rem; border-radius: 15px; min-height: 420px; }
 
     /* 9. Footer */
     footer { background: var(--espresso); color: var(--pearl); text-align: center; padding: 3rem 1rem; margin-top: 5rem; }
@@ -133,6 +133,7 @@
       transition: width .25s ease;
     }
     .nav-links a:not(.btn-primary):hover::after { width: 100%; }
+    .nav-links .btn-nav { padding: 0.5rem 1.2rem; color: #fff; }
     .hero { gap: clamp(2rem, 5vw, 5rem); }
     .hero-content { max-width: 560px; }
     .hero-content h1 { letter-spacing: -1.5px; }
@@ -153,6 +154,7 @@
     }
     .hero-card::after { width: 350px; height: 350px; }
     .hero-card span { font-size: clamp(3rem, 6vw, 4.8rem); letter-spacing: 8px; }
+    .hero-card p { margin-top: 1rem; font-family: var(--font-title); font-size: 1.5rem; }
     .beneficio-card, .exp-item, .testimonio-card, .faq-item {
       box-shadow: 0 10px 30px rgba(51,37,32,.045);
       transition: transform .25s ease, box-shadow .25s ease;
@@ -168,9 +170,11 @@
     }
     .btn-primary { box-shadow: 0 8px 18px rgba(51,37,32,.12); }
     .btn-primary:focus-visible { outline-color: var(--rose-nude); }
+    .btn-cta2 { background: var(--rose-nude); color: var(--espresso); }
     .faq-item { border: 1px solid rgba(51,37,32,.06); }
     #hubspot-form-container { box-shadow: 0 8px 25px rgba(51,37,32,.05); }
     footer { border-top: 4px solid var(--rose-nude); }
+    footer p { margin-top: 1rem; font-size: 0.9rem; }
     @media (max-width: 900px) {
       .nav-links { gap: 1rem; }
       .nav-links a { font-size: .78rem; }
@@ -200,11 +204,24 @@
         transition-duration: .01ms !important;
       }
     }
-
   </style>
 
-  <!-- Script de HubSpot Form -->
-  <script src="https://js.hsforms.net/forms/embed/52186777.js" defer></script>
+  <!-- Google Tag Manager: se carga en la primera interacción (o a los 4 s) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function loadGTM() {
+      if (window.gtmLoaded) return;
+      window.gtmLoaded = true;
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NPPXV3HR');
+    }
+    ['scroll','mousemove','touchstart','keydown','click'].forEach(function (ev) {
+      window.addEventListener(ev, loadGTM, { once: true, passive: true });
+    });
+    setTimeout(loadGTM, 4000);
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#hero">Saltar al contenido principal</a>
@@ -222,146 +239,170 @@
         <li><a href="#productos">Productos</a></li>
         <li><a href="#testimonios">Testimonios</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contacto" class="btn-primary" style="padding: 0.5rem 1.2rem; color: #fff;">Contacto</a></li>
+        <li><a href="#contacto" class="btn-primary btn-nav">Contacto</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- SECCIÓN 1: HERO -->
-  <section id="hero" class="hero">
-    <div class="hero-content">
-      <p class="section-tag">BRAND BOOK · BEAUTY 2026</p>
-      <h1>Tu piel.<br><em>Tu tono.</em><br>Tu esencia.</h1>
-      <p>LUMÉ es una marca de maquillaje y belleza pensada para celebrar la belleza real. Descubre productos modernos, inclusivos y fáciles de usar para expresar tu estilo con confianza.</p>
-      <br>
-      <a href="#cta1" id="btn-hero-explore" class="btn-primary">Explorar colección</a>
-    </div>
-    <div class="hero-card">
-      <span>LUMÉ</span>
-      <p style="margin-top: 1rem; font-family: var(--font-title); font-size: 1.5rem;">BEAUTY WITHOUT RULES</p>
-    </div>
-  </section>
+  <main>
+    <!-- SECCIÓN 1: HERO -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <p class="section-tag">BRAND BOOK · BEAUTY 2026</p>
+        <h1>Tu piel.<br><em>Tu tono.</em><br>Tu esencia.</h1>
+        <p>LUMÉ es una marca de maquillaje y belleza pensada para celebrar la belleza real. Descubre productos modernos, inclusivos y fáciles de usar para expresar tu estilo con confianza.</p>
+        <br>
+        <a href="#cta1" id="btn-hero-explore" class="btn-primary">Explorar colección</a>
+      </div>
+      <div class="hero-card">
+        <span>LUMÉ</span>
+        <p>BEAUTY WITHOUT RULES</p>
+      </div>
+    </section>
 
-  <!-- SECCIÓN 2: BENEFICIOS -->
-  <section id="beneficios">
-    <p class="section-tag">02 · IDENTIDAD Y BENEFICIOS</p>
-    <h2>Más que maquillaje,<br><em>una identidad.</em></h2>
-    <div class="beneficios-grid">
-      <div class="beneficio-card">
-        <b>Propósito</b>
-        <span>Resaltar lo que ya existe de manera natural y sin estereotipos.</span>
+    <!-- SECCIÓN 2: BENEFICIOS -->
+    <section id="beneficios">
+      <p class="section-tag">02 · IDENTIDAD Y BENEFICIOS</p>
+      <h2>Más que maquillaje,<br><em>una identidad.</em></h2>
+      <div class="beneficios-grid">
+        <div class="beneficio-card">
+          <b>Propósito</b>
+          <span>Resaltar lo que ya existe de manera natural y sin estereotipos.</span>
+        </div>
+        <div class="beneficio-card">
+          <b>Visión</b>
+          <span>Belleza inclusiva, vegana, cruelty-free y cercana a todos.</span>
+        </div>
+        <div class="beneficio-card">
+          <b>Valores</b>
+          <span>Libertad de expresión, confianza, autenticidad y elegancia.</span>
+        </div>
       </div>
-      <div class="beneficio-card">
-        <b>Visión</b>
-        <span>Belleza inclusiva, vegana, cruelty-free y cercana a todos.</span>
-      </div>
-      <div class="beneficio-card">
-        <b>Valores</b>
-        <span>Libertad de expresión, confianza, autenticidad y elegancia.</span>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SECCIÓN 3: CTA 1 -->
-  <section id="cta1">
-    <div class="cta-banner">
-      <h2>Encuentra tu tono ideal hoy</h2>
-      <p>Aprovecha nuestro envío gratuito en tu primera orden de lanzamiento.</p>
-      <br>
-      <a href="#contacto" id="btn-cta-1" class="btn-primary">Solicitar Muestras</a>
-    </div>
-  </section>
+    <!-- SECCIÓN 3: CTA 1 -->
+    <section id="cta1">
+      <div class="cta-banner">
+        <h2>Encuentra tu tono ideal hoy</h2>
+        <p>Aprovecha nuestro envío gratuito en tu primera orden de lanzamiento.</p>
+        <br>
+        <a href="#contacto" id="btn-cta-1" class="btn-primary">Solicitar Muestras</a>
+      </div>
+    </section>
 
-  <!-- SECCIÓN 4: EXPLICACIÓN / PRODUCTOS -->
-  <section id="productos">
-    <p class="section-tag">04 · EXPERIENCIA LUMÉ</p>
-    <h2>El detalle también <em>comunica.</em></h2>
-    <p>Nuestra colección se adapta a tu rutina diaria en solo 3 pasos simples:</p>
-    <div class="exp-grid">
-      <div class="exp-item">
-        <span>01</span>
-        <h3>Descubre</h3>
-        <p>Encuentra tonos y texturas pensados para diferentes tipos y tonalidades de piel.</p>
+    <!-- SECCIÓN 4: EXPLICACIÓN / PRODUCTOS -->
+    <section id="productos">
+      <p class="section-tag">04 · EXPERIENCIA LUMÉ</p>
+      <h2>El detalle también <em>comunica.</em></h2>
+      <p>Nuestra colección se adapta a tu rutina diaria en solo 3 pasos simples:</p>
+      <div class="exp-grid">
+        <div class="exp-item">
+          <span>01</span>
+          <h3>Descubre</h3>
+          <p>Encuentra tonos y texturas pensados para diferentes tipos y tonalidades de piel.</p>
+        </div>
+        <div class="exp-item">
+          <span>02</span>
+          <h3>Elige</h3>
+          <p>Combina productos versátiles y crea tu propia rutina rápida de maquillaje.</p>
+        </div>
+        <div class="exp-item">
+          <span>03</span>
+          <h3>Exprésate</h3>
+          <p>Tu belleza no tiene reglas. Siéntete libre y radiante todo el día.</p>
+        </div>
       </div>
-      <div class="exp-item">
-        <span>02</span>
-        <h3>Elige</h3>
-        <p>Combina productos versátiles y crea tu propia rutina rápida de maquillaje.</p>
-      </div>
-      <div class="exp-item">
-        <span>03</span>
-        <h3>Exprésate</h3>
-        <p>Tu belleza no tiene reglas. Siéntete libre y radiante todo el día.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SECCIÓN 5: TESTIMONIOS -->
-  <section id="testimonios">
-    <p class="section-tag">05 · REVIEWS</p>
-    <h2>Lo que dicen <em>de LUMÉ</em></h2>
-    <div class="testimonios-grid">
-      <div class="testimonio-card">
-        <p>"Los tonos son exactamente iguales a la piel real. Se siente ligero, libre y súper elegante durante todo el día."</p>
-        <div class="testimonio-author">— Camila R., Beauty Blogger</div>
+    <!-- SECCIÓN 5: TESTIMONIOS -->
+    <section id="testimonios">
+      <p class="section-tag">05 · REVIEWS</p>
+      <h2>Lo que dicen <em>de LUMÉ</em></h2>
+      <div class="testimonios-grid">
+        <div class="testimonio-card">
+          <p>"Los tonos son exactamente iguales a la piel real. Se siente ligero, libre y súper elegante durante todo el día."</p>
+          <div class="testimonio-author">— Camila R., Beauty Blogger</div>
+        </div>
+        <div class="testimonio-card">
+          <p>"Por fin una marca que entiende la belleza sin filtros. La calidad de los ingredientes se nota al instante."</p>
+          <div class="testimonio-author">— Sofía M., Maquilladora Profesional</div>
+        </div>
       </div>
-      <div class="testimonio-card">
-        <p>"Por fin una marca que entiende la belleza sin filtros. La calidad de los ingredientes se nota al instante."</p>
-        <div class="testimonio-author">— Sofía M., Maquilladora Profesional</div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SECCIÓN 6: CTA 2 -->
-  <section id="cta2">
-    <div class="cta-2">
-      <p class="section-tag" style="color: var(--rose-nude);">OFERTA DE LANZAMIENTO</p>
-      <h2>Obtén un 10% OFF en tu primera compra</h2>
-      <p>Únete a la comunidad LUMÉ y recibe consejos exclusivos de maquillaje.</p>
-      <br>
-      <a href="#contacto" id="btn-cta-2" class="btn-primary" style="background: var(--rose-nude); color: var(--espresso);">Quiero mi Descuento</a>
-    </div>
-  </section>
+    <!-- SECCIÓN 6: CTA 2 -->
+    <section id="cta2">
+      <div class="cta-2">
+        <p class="section-tag">OFERTA DE LANZAMIENTO</p>
+        <h2>Obtén un 10% OFF en tu primera compra</h2>
+        <p>Únete a la comunidad LUMÉ y recibe consejos exclusivos de maquillaje.</p>
+        <br>
+        <a href="#contacto" id="btn-cta-2" class="btn-primary btn-cta2">Quiero mi Descuento</a>
+      </div>
+    </section>
 
-  <!-- SECCIÓN 7: FAQ -->
-  <section id="faq">
-    <p class="section-tag">07 · PREGUNTAS FRECUENTES</p>
-    <h2>Resolvemos tus <em>dudas</em></h2>
-    <div class="faq-container">
-      <div class="faq-item">
-        <h3>¿Los productos son aptos para pieles sensibles?</h3>
-        <p>Sí, todos nuestros productos son dermatológicamente probados, hipoalergénicos y 100% cruelty-free.</p>
+    <!-- SECCIÓN 7: FAQ -->
+    <section id="faq">
+      <p class="section-tag">07 · PREGUNTAS FRECUENTES</p>
+      <h2>Resolvemos tus <em>dudas</em></h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <h3>¿Los productos son aptos para pieles sensibles?</h3>
+          <p>Sí, todos nuestros productos son dermatológicamente probados, hipoalergénicos y 100% cruelty-free.</p>
+        </div>
+        <div class="faq-item">
+          <h3>¿Cómo puedo conocer mi tono exacto?</h3>
+          <p>Puedes escribirnos mediante el formulario de contacto o pedir nuestro kit de muestras en línea.</p>
+        </div>
+        <div class="faq-item">
+          <h3>¿Hacen envíos a todo el país?</h3>
+          <p>Efectivamente, despachamos en 24-48 horas a todas las ciudades principales.</p>
+        </div>
       </div>
-      <div class="faq-item">
-        <h3>¿Cómo puedo conocer mi tono exacto?</h3>
-        <p>Puedes escribirnos mediante el formulario de contacto o pedir nuestro kit de muestras en línea.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Hacen envíos a todo el país?</h3>
-        <p>Efectivamente, despachamos en 24-48 horas a todas las ciudades principales.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SECCIÓN 8: PRE-FOOTER / CONTACTO CRM -->
-  <section id="contacto">
-    <div class="prefooter-box">
-      <p class="section-tag">08 · COMUNIDAD & CONTACTO</p>
-      <h2>Hablemos de <em>beauty.</em></h2>
-      <p>Déjanos tus datos para recibir asesoría personalizada e integrarte a nuestro club exclusivo.</p>
-      
-      <!-- FORMULARIO HUBSPOT CRM -->
-      <div id="hubspot-form-container">
-        <div class="hs-form-frame" data-region="na1" data-form-id="fd75da8a-ddfc-44bd-921b-7b84452df5a8" data-portal-id="52186777"></div>
+    <!-- SECCIÓN 8: PRE-FOOTER / CONTACTO CRM -->
+    <section id="contacto">
+      <div class="prefooter-box">
+        <p class="section-tag">08 · COMUNIDAD &amp; CONTACTO</p>
+        <h2>Hablemos de <em>beauty.</em></h2>
+        <p>Déjanos tus datos para recibir asesoría personalizada e integrarte a nuestro club exclusivo.</p>
+
+        <!-- FORMULARIO HUBSPOT CRM -->
+        <div id="hubspot-form-container">
+          <div class="hs-form-frame" data-region="na1" data-form-id="fd75da8a-ddfc-44bd-921b-7b84452df5a8" data-portal-id="52186777"></div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- SECCIÓN 9: FOOTER -->
   <footer id="footer">
     <a href="#hero" class="logo-brand">LUMÉ</a>
-    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">© 2026 LUMÉ Beauty Studio · Proyecto Brand por Nicolás</p>
+    <p>© 2026 LUMÉ Beauty Studio · Proyecto Brand por Nicolás</p>
   </footer>
 
+  <!-- HubSpot: se carga solo cuando el usuario se acerca al formulario -->
+  <script>
+    (function () {
+      var target = document.getElementById('contacto');
+      var loaded = false;
+      function loadHubspot() {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.src = 'https://js.hsforms.net/forms/embed/52186777.js';
+        s.defer = true;
+        document.body.appendChild(s);
+      }
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries, obs) {
+          if (entries[0].isIntersecting) { loadHubspot(); obs.disconnect(); }
+        }, { rootMargin: '400px' }).observe(target);
+      } else {
+        window.addEventListener('load', loadHubspot);
+      }
+    })();
+  </script>
 </body>
 </html>
